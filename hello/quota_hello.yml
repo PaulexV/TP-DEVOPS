@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: quota-hello
+spec:
+  hard:
+    pods: "3"
+    requests.cpu: "1"
+    limits.cpu: "3"
+    requests.memory: 200Mi
+    limits.memory: 800Mi

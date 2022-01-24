@@ -1,0 +1,10 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: devops303
+  name: client
+rules:
+- apiGroups: [""]
+  resources: ["namespaces/portforward"]
+  resourceNames: ["devops303"]
+  verbs: ["get", "list", "watch"]

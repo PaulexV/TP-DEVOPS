@@ -1,0 +1,28 @@
+apiVersion: v1
+clusters:
+  - cluster:
+      server: http://devops303.paul
+    name: development
+contexts:
+  - context:
+      cluster: development
+      namespace: devops303
+      user: clusterAdmin
+    name: admin-context
+  - context:
+      cluster: development
+      namespace: devops303
+      user: Client
+    name: client-context
+  - context:
+      cluster: development
+      namespace: devops303
+      user: Dev
+    name: dev-context
+current-context: ""
+kind: Config
+preferences: {}
+users:
+  - name: Client
+  - name: Dev
+  - name: clusterAdmin
